@@ -70,7 +70,7 @@ export const handleLogin = async (req: Request, res: Response) => {
     }
 
     const token = jwt.sign({ id: user._id, email: user.email }, JWT_KEY, {
-      expiresIn: "5m",
+      expiresIn: "1d",
     });
 
     res.status(200).json({
